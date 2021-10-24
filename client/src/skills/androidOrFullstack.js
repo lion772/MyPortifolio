@@ -1,4 +1,4 @@
-import { FaMobileAlt } from "react-icons/fa";
+import { FaMobileAlt, FaRegClock, FaHammer } from "react-icons/fa";
 
 export default function AndroidOrFullstack() {
     return (
@@ -6,30 +6,44 @@ export default function AndroidOrFullstack() {
             <div className="android-development">
                 <h2>Android development </h2>
                 <div>
-                    <p>
-                        I&apos;m responsible for the maintenance of my
-                        company&apos;s app, promoting a better experience and
-                        quality for our users. I learned many things, new
-                        technologies, such as: how to work by using both
-                        programming languages (Kotlin and Java), MVVM
-                        architecture, Courotine, Dependency Injection (Dagger 2
-                        and Koin, mainly), DataBinding, SOLID concept, and so on
-                        and so forth. It&apos;s my first experience as an
-                        android developer, that&apos;s why I&apos;m grateful for
-                        everything this company has done for me, from opening up
-                        its job offer door to improving my level of coding and
-                        become better every single day.
+                    <p id="opening-text">
+                        I&apos;m grateful for everything this company has done
+                        for me, from opening up its job offer door to improving
+                        my level of coding and become better every single day.
+                        My routine is based on the following topics:
                     </p>
-                    <div>
-                        <FaMobileAlt
-                            style={{ color: "white", fontSize: "80px" }}
-                        />
-                        <FaMobileAlt
-                            style={{ color: "white", fontSize: "80px" }}
-                        />
-                        <FaMobileAlt
-                            style={{ color: "white", fontSize: "80px" }}
-                        />
+                    <div className="icons-android-development">
+                        <div className="icons-inner-container">
+                            <FaRegClock
+                                style={{ color: "white", fontSize: "60px" }}
+                            />
+                            <p>
+                                Improving users’ experience - Giving the best
+                                quality and comfort to the experienced and
+                                recent users.
+                            </p>
+                        </div>
+                        <div className="icons-inner-container">
+                            <FaHammer
+                                style={{ color: "white", fontSize: "60px" }}
+                            />
+                            <p>
+                                Maintenance of Java and Kotlin Code - I was
+                                assigned to improve the java code which already
+                                exists, and it compounds much of the whole app,
+                                around 90%;
+                            </p>
+                        </div>
+                        <div className="icons-inner-container">
+                            <FaMobileAlt
+                                style={{ color: "white", fontSize: "60px" }}
+                            />
+                            <p>
+                                Converting outdated java code into Kotlin code,
+                                applying MVVM architecture, dependency injection
+                                and databinding to the layouts.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

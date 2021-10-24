@@ -1,5 +1,5 @@
 import LottieAnimation from "../animation/lottie";
-import home from "../animation/skill.json";
+import home from "../animation/dev2.json";
 
 export default function Lottie() {
     return (
