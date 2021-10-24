@@ -58,6 +58,7 @@ header {
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
         url(/eleonore-kemmel.jpg);
+    filter: brightness(70%);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -102,17 +103,24 @@ header {
 /*-------------------------------------------------------*/
 
 .skills-container {
-    background-color: var(--white);
+    background-color: var(--ghostWhite);
+    color: black;
 }
 
-.skills-container h2 {
+.skills-container h2,
+.choice h3 {
     margin: 0 0 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 20px 0 0 0;
 }
 
 .skills-container h2:after {
+    content: " ";
+    display: inline-block;
+    width: 8%;
+    margin-top: 4px;
     border-top: 2px violet solid;
 }
 
@@ -120,6 +128,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 100vh;
 }
 
 .introduction > div {
@@ -129,6 +138,35 @@ header {
 .introduction-paragraph {
     text-align: center;
     width: 20vw;
+}
+
+.android-development {
+    height: 100vh;
+    background-color: blueviolet;
+    background-attachment: fixed;
+    color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+        url(/mobile-phone2.jpg);
+    background-size: cover;
+}
+
+.web-development {
+    height: 100vh;
+    background-color: blueviolet;
+    background-attachment: fixed;
+    color: var(--white);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+        url(/web-development-picture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.web-development h2:after {
+    content: " ";
+    display: inline-block;
+    width: 24%;
+    margin-top: 4px;
+    border-top: 2px violet solid;
 }
 
 @media screen and (max-width: 300px) {

@@ -1,4 +1,5 @@
 import Lottie from "./lottie";
+import AndroidOrFullstack from "./androidOrFullstack";
 
 export default function Skills() {
     return (
@@ -8,14 +9,16 @@ export default function Skills() {
             <div className="introduction">
                 <div className="introduction-paragraph">
                     <p>
-                        I decided to start a new journey as Full-Stack developer
-                        since I moved out to Germany, in order to expand my
-                        knowledge about this area and go deeper about the real
-                        meaning of being a good developer.
+                        In Brazil I worked as android developer for 6 months at
+                        Smart Pos, but later on decided to start a new journey
+                        in Germany and joined Spiced Academy course, in order to
+                        become a Full-Stack developer and go deeper into the
+                        real meaning of becoming a good developer.
                     </p>
                 </div>
                 <Lottie />
             </div>
+            <AndroidOrFullstack />
         </div>
     );
 }

@@ -6,7 +6,7 @@ export default function Welcome() {
             muted={true}
             width="100%"
         >
-            <source src="/Welcome-2.mp4" type="video/mp4" />
+            <source src="/Welcome.mp4" type="video/mp4" />
         </video>
     );
 }

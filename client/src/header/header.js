@@ -10,8 +10,9 @@ export default function Header() {
             <header>
                 <nav>
                     <ul className="nav-items">
-                        <li>Work</li>
+                        <li>Skills</li>
                         <li>Experience</li>
+                        <li>Work</li>
                         <li>About</li>
                     </ul>
                 </nav>
