@@ -2,6 +2,7 @@
     --ghostWhite: rgb(243, 243, 250);
     --white: #fff;
     --red: rgb(255, 0, 0);
+    --violet: rgb(211, 119, 211);
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 html {
     color: var(--white);
     background-color: var(--white);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lato", "Arial", sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-rendering: optimizeLegibility;
@@ -39,7 +40,7 @@ h1 {
     word-spacing: 2px;
     display: inline-block;
     letter-spacing: 2px;
-    font-size: 260%;
+    font-size: 300%;
     font-weight: 10;
     /*     text-transform: uppercase;
  */
@@ -75,6 +76,7 @@ header {
 .nav-items li {
     border-bottom: 3px transparent solid;
     transition: 0.5s;
+    font-size: 120%;
 }
 
 .nav-items li:hover {
@@ -83,7 +85,6 @@ header {
 }
 
 .first-container {
-    border: 1px var(--red) solid;
     width: 100vw;
     height: 70vh;
     display: flex;
@@ -94,4 +95,48 @@ header {
 }
 
 .first-container p {
+}
+
+/*-------------------------------------------------------*/
+/*                      Skills
+/*-------------------------------------------------------*/
+
+.skills-container {
+    background-color: var(--white);
+}
+
+.skills-container h2 {
+    margin: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+}
+
+.skills-container h2:after {
+    border-top: 2px violet solid;
+}
+
+.introduction {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.introduction > div {
+    width: 40vw;
+}
+
+.introduction-paragraph {
+    text-align: center;
+    width: 20vw;
+}
+
+@media screen and (max-width: 300px) {
+    div.introduction {
+        flex-direction: column;
+    }
+
+    .nav-items {
+        flex-direction: column;
+    }
 }
