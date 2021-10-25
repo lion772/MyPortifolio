@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap");
+
 :root {
     --ghostWhite: rgb(243, 243, 250);
     --white: #fff;
@@ -27,10 +29,11 @@ html {
 /*-------------------------------------------------------*/
 
 p {
-    font-weight: 300;
+    font-weight: 280;
     line-height: 200%;
     word-spacing: 4px;
     letter-spacing: 4px;
+    font-weight: 500;
 }
 
 /*-------------------------------------------------------*/
@@ -40,10 +43,8 @@ h1 {
     word-spacing: 2px;
     display: inline-block;
     letter-spacing: 2px;
-    font-size: 300%;
-    font-weight: 10;
-    /*     text-transform: uppercase;
- */
+    font-size: 350%;
+    font-weight: 700;
 }
 
 h2 {
@@ -53,8 +54,19 @@ h2 {
     font-size: 250%;
     font-weight: 10;
     padding: 20px 0;
+    font-weight: 500;
+
     /*     text-transform: uppercase;
  */
+}
+
+h3 {
+    font-size: 160%;
+    word-spacing: 2px;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 10;
+    font-weight: 500;
 }
 
 /*-------------------------------------------------------*/
@@ -63,14 +75,22 @@ h2 {
 
 .opening-animation-container {
     height: 100vh;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 /*-------------------------------------------------------*/
 /*                      Header
 /*-------------------------------------------------------*/
+
+.bubble-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 120vh;
+}
 
 header {
     display: flex;
@@ -78,9 +98,9 @@ header {
     justify-content: flex-start;
     align-items: flex-end;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
         url(/eleonore-kemmel.jpg);
-    height: 100vh;
+    height: 120vh;
     background-size: cover;
     background-position: center;
 }
@@ -89,7 +109,7 @@ header {
     width: 50vw;
     height: 10vh;
     display: flex;
-    margin: 0;
+    margin: 2rem 0 0;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
@@ -98,7 +118,9 @@ header {
 .nav-items li {
     border-bottom: 3px transparent solid;
     transition: 0.5s;
-    font-size: 140%;
+    font-size: 130%;
+    font-weight: 150;
+    color: violet;
 }
 
 .nav-items li:hover {
@@ -116,8 +138,13 @@ header {
     text-align: center;
 }
 
+.first-container h1 {
+    font-size: 500%;
+    margin-bottom: 0;
+}
+
 .first-container p {
-    font-size: 140%;
+    width: 60vw;
 }
 
 /*-------------------------------------------------------*/
@@ -161,6 +188,10 @@ header {
 
 .android-development {
     height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: blueviolet;
     background-attachment: fixed;
     color: var(--white);
@@ -186,7 +217,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    text-align: justify;
+    text-align: center;
 }
 
 .icons-inner-container p {
@@ -196,11 +227,15 @@ header {
 }
 
 .web-development {
-    height: 100vh;
+    height: 140vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; */
     background-color: blueviolet;
     background-attachment: fixed;
     color: var(--white);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url(/web-development-picture.jpg);
     background-size: cover;
     background-position: center;
@@ -212,21 +247,97 @@ header {
     margin: 0;
 }
 
+.top-web-container {
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.top-web-container p {
+    width: 50vw;
+}
+
 .android-development h2:after {
     content: " ";
     display: inline-block;
-    width: 40%;
+    width: 100%;
     border-top: 2px violet solid;
 }
 
 .web-development h2:after {
     content: " ";
     display: inline-block;
-    width: 42%;
+    width: 58%;
     border-top: 2px violet solid;
+    transform: translate(-40%);
+}
+
+.bottom-web-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem 0 0 0;
+}
+
+.bottom-inner-container {
+    width: 30vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgb(0 0 0 / 80%) 2px 3px 7px 2px;
+    background-color: dimgray;
+    border-radius: 0.5em;
+    margin-right: 2rem;
+    transition: 1s;
+}
+
+.bottom-inner-container:hover {
+    transition: 1s;
+    transform: scale(1.1);
+    filter: brightness(1.4);
+}
+
+.bottom-inner-container:active {
+    filter: brightness(0.9);
+    transition: 0.5s;
+}
+
+.bottom-inner-container ul {
+    padding: 0;
+}
+
+.bottom-inner-container li {
+    list-style: none;
+    padding: 0;
+}
+
+@media screen and (max-width: 800px) {
+    p {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 50%;
+    }
 }
 
 @media screen and (max-width: 300px) {
+    p {
+        font-size: 30%;
+    }
     div.introduction {
         flex-direction: column;
     }

@@ -11,7 +11,6 @@ export default function App() {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/">
-                        <Welcome />
                         <Header />
                         <Skills />
                     </Route>

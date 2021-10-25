@@ -1,4 +1,5 @@
 import { FaMobileAlt, FaRegClock, FaHammer } from "react-icons/fa";
+/* import Flip from "../hooks/flipCard"; */
 
 export default function AndroidOrFullstack() {
     return (
@@ -57,8 +58,36 @@ export default function AndroidOrFullstack() {
                 </div>
             </div>
             <div className="web-development">
-                <h2>Full-Stack development </h2>
-                <div></div>
+                <div className="top-web-container">
+                    <h2>Full-Stack development </h2>
+                    <p>
+                        Here I had a great experience by learning how to build
+                        single page applications with the latest front-end
+                        frameworks. Starting with Vue.js, I developed an
+                        application called "image board", where anyone can
+                        upload a picture in it and save it on AWS and database.
+                        In the end, one of the last projects of my course, I had
+                        to create a social network webpage by using React.
+                    </p>
+                </div>
+                <div className="bottom-web-container">
+                    {/* <Flip classes={["bottom-inner-container"]} /> */}
+                    <div className="bottom-inner-container">
+                        <h3>Front-end</h3>
+                        <ul>
+                            <li>JS</li>
+                            <li>Vue</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div className="bottom-inner-container">
+                        <h3>Back-end</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Postgresql</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </>
     );
