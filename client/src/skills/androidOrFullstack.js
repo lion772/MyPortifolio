@@ -10,12 +10,15 @@ export default function AndroidOrFullstack() {
                         I&apos;m grateful for everything this company has done
                         for me, from opening up its job offer door to improving
                         my level of coding and become better every single day.
-                        My routine is based on the following topics:
+                        The tasks assigned to me were:
                     </p>
                     <div className="icons-android-development">
                         <div className="icons-inner-container">
                             <FaRegClock
-                                style={{ color: "white", fontSize: "60px" }}
+                                style={{
+                                    color: "darkgoldenrod",
+                                    fontSize: "60px",
+                                }}
                             />
                             <p>
                                 Improving users’ experience - Giving the best
@@ -25,7 +28,10 @@ export default function AndroidOrFullstack() {
                         </div>
                         <div className="icons-inner-container">
                             <FaHammer
-                                style={{ color: "white", fontSize: "60px" }}
+                                style={{
+                                    color: "darkgoldenrod",
+                                    fontSize: "60px",
+                                }}
                             />
                             <p>
                                 Maintenance of Java and Kotlin Code - I was
@@ -36,7 +42,10 @@ export default function AndroidOrFullstack() {
                         </div>
                         <div className="icons-inner-container">
                             <FaMobileAlt
-                                style={{ color: "white", fontSize: "60px" }}
+                                style={{
+                                    color: "darkgoldenrod",
+                                    fontSize: "60px",
+                                }}
                             />
                             <p>
                                 Converting outdated java code into Kotlin code,

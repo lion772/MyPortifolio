@@ -58,6 +58,17 @@ h2 {
 }
 
 /*-------------------------------------------------------*/
+/*                      Opening
+/*-------------------------------------------------------*/
+
+.opening-animation-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------------------------------------------------------*/
 /*                      Header
 /*-------------------------------------------------------*/
 
@@ -87,7 +98,7 @@ header {
 .nav-items li {
     border-bottom: 3px transparent solid;
     transition: 0.5s;
-    font-size: 120%;
+    font-size: 140%;
 }
 
 .nav-items li:hover {
@@ -201,11 +212,17 @@ header {
     margin: 0;
 }
 
-.web-development h2:after,
 .android-development h2:after {
     content: " ";
     display: inline-block;
-    width: 45%;
+    width: 40%;
+    border-top: 2px violet solid;
+}
+
+.web-development h2:after {
+    content: " ";
+    display: inline-block;
+    width: 42%;
     border-top: 2px violet solid;
 }
 

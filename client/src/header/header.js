@@ -17,7 +17,7 @@ export default function Header() {
                     </ul>
                 </nav>
                 <div className="first-container">
-                    <h1>Hey, I&apos;m William</h1>
+                    <h1>Hey, I&apos;m William 💻</h1>
                     <p>
                         Full-Stack development background and <br />
                         working soon as Expert digital interfaces at Coac.
