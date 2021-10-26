@@ -5,7 +5,7 @@ export default function AndroidOrFullstack() {
     return (
         <>
             <div className="android-development">
-                <h2>Android development </h2>
+                <h2 id="android">Android development </h2>
                 <div>
                     <p id="opening-text">
                         I&apos;m grateful for everything this company has done
@@ -59,7 +59,7 @@ export default function AndroidOrFullstack() {
             </div>
             <div className="web-development">
                 <div className="top-web-container">
-                    <h2>Full-Stack development </h2>
+                    <h2 id="full-stack">Full-Stack development </h2>
                     <div>
                         <p>
                             Here I had a great experience by learning how to
@@ -76,21 +76,6 @@ export default function AndroidOrFullstack() {
                 <div className="bottom-web-container">
                     <Flip classes={"front-bottom-inner-container"} />
                     <Flip classes={"back-bottom-inner-container"} />
-                    {/* <div className="bottom-inner-container">
-                        <h3>Front-end</h3>
-                        <ul>
-                            <li>JS</li>
-                            <li>Vue</li>
-                            <li>React</li>
-                        </ul>
-                    </div>
-                    <div className="bottom-inner-container">
-                        <h3>Back-end</h3>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Postgresql</li>
-                        </ul>
-                    </div> */}
                 </div>
             </div>
         </>

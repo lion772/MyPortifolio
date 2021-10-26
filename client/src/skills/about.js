@@ -1,10 +1,10 @@
 import Lottie from "./lottie";
 import AndroidOrFullstack from "./androidOrFullstack";
 
-export default function Skills() {
+export default function About() {
     return (
         <div className="skills-container">
-            <h2>Skills </h2>
+            <h2 id="about">About </h2>
 
             <div className="introduction">
                 <div className="introduction-paragraph">
