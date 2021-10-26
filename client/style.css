@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Pacifico&display=swap");
 
 :root {
     --ghostWhite: rgb(243, 243, 250);
@@ -130,7 +130,6 @@ header {
     position: fixed;
     inset: 0; /* works in a similar way as margin and padding */
     filter: blur(6px);
-    /* transform: translateX(-350px); */
 }
 
 .side-nav {
@@ -144,13 +143,18 @@ header {
     transform: translateX(100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    transition-property: transform;
+    justify-content: flex-start;
     transition-duration: 1s;
+    transition-property: all;
+}
+
+.side-nav a {
+    margin-top: 1rem;
+    text-decoration: none;
 }
 
 .on {
-    transition-property: transform;
+    transition-property: all;
     transition-duration: 1s;
     transform: translateX(0);
 }
@@ -357,12 +361,88 @@ header {
 /*                      Contact
 /*-------------------------------------------------------*/
 
-section {
-    width: 100vw;
-    height: 100vh;
-}
 .contact-container {
     background-color: var(--ghostWhite);
+    width: 100vw;
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container h2 {
+    color: blueviolet;
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.contact-container h3 {
+    color: blueviolet;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+}
+
+.nav-contact {
+    background-color: blueviolet;
+    height: 10vh;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100vw;
+}
+
+.nav-contact span {
+    margin-right: 4rem;
+}
+
+.button {
+    text-decoration: none;
+    border: 2px solid var(--ghostWhite);
+    border-radius: 50px;
+    background-color: darkblue;
+    color: var(--ghostWhite);
+    padding: 10px;
+    margin-top: 2rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.bottom-container-content {
+    width: 100%;
+    padding: 30px;
+    margin: 3rem 0 0;
+    background-color: blueviolet;
+}
+
+.bottom-container-content p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-container a {
+    text-decoration: none;
+    margin: 0 10px 0;
+    color: darkorchid;
+    filter: brightness(0.4);
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.5s;
+    border-bottom: 2px transparent solid;
+}
+
+.bottom-container a:hover {
+    border-bottom: 2px darkorchid solid;
+    transition: 0.5s;
 }
 
 @media screen and (max-width: 1024px) {
