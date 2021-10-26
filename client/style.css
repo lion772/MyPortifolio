@@ -141,7 +141,7 @@ header {
     background-color: whitesmoke;
     width: 300px;
     height: 100vh;
-    transform: translatex(100%);
+    transform: translateX(100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,9 +150,9 @@ header {
 }
 
 .on {
-    transform: translateX(0%);
     transition-property: transform;
     transition-duration: 1s;
+    transform: translateX(0);
 }
 
 .hidden {
@@ -180,7 +180,7 @@ header {
 }
 
 /*-------------------------------------------------------*/
-/*                      Skills
+/*                      About
 /*-------------------------------------------------------*/
 
 .skills-container {
@@ -351,6 +351,18 @@ header {
 .back-bottom-inner-container li {
     list-style: none;
     padding: 0;
+}
+
+/*-------------------------------------------------------*/
+/*                      Contact
+/*-------------------------------------------------------*/
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+.contact-container {
+    background-color: var(--ghostWhite);
 }
 
 @media screen and (max-width: 1024px) {

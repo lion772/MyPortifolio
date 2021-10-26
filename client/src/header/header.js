@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Particles from "react-particles-js";
-import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Navbar from "../hooks/nav";
 
 import { useSpring, animated } from "@react-spring/web";
 
 export default function Header() {
-    const [isSideNavOn, setSideNav] = useState(false);
-    const [state, toggle] = useState(true);
-    const [offsetY, setOffsetY] = useState(0);
-    const handleScroll = () => setOffsetY(window.pageYOffset);
-
-    const handleSideNav = () => {
-        setSideNav(!isSideNavOn);
-    };
+    /* const [offsetY, setOffsetY] = useState(0); */
+    /* const handleScroll = () => setOffsetY(window.pageYOffset); */
 
     /* const { x } = useSpring({
         from: { x: 0 },
@@ -27,60 +21,19 @@ export default function Header() {
         }),
     };
  */
-    useEffect(() => {
+    /* useEffect(() => {
         /* window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
-        }; */
-    }, []);
+        }; 
+    }, []); */
 
     return (
         <>
             <header>
-                <nav onClick={() => toggle(!state)}>
-                    <div>
-                        <ul
-                            className="nav-items"
-                            style={{
-                                transform: `translateY(${offsetY * 0.8})px`,
-                            }}
-                        >
-                            <a href="#about">
-                                <li>About</li>
-                            </a>
-                            <a href="#android">
-                                <li>Android</li>
-                            </a>
-                            <a href="#full-stack">
-                                <li>Full-stack</li>
-                            </a>
-                            <a onClick={handleSideNav}>
-                                {isSideNavOn ? (
-                                    <>
-                                        <span id="burguer-menu">
-                                            <FaBars />
-                                        </span>
-                                        <div className="overlay"></div>
-                                        <div className="side-nav on">
-                                            <Link to="/contact">Contact</Link>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <>
-                                        <li>
-                                            <FaBars />
-                                        </li>
-                                        <div className="side-nav hidden"></div>
-                                    </>
-                                )}
-                            </a>
-                        </ul>
-                    </div>
-                </nav>
+                <Navbar />
                 <div className="first-container">
-                    <h1 style={{ transform: `translateY(${offsetY * 0.5})px` }}>
-                        What&apos;s up!
-                    </h1>
+                    <h1>What&apos;s up!</h1>
                     <h3>I&apos;m William Steinke de Mello</h3>
                     <p>
                         Full-Stack development background and <br />
