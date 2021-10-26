@@ -70,17 +70,6 @@ h3 {
 }
 
 /*-------------------------------------------------------*/
-/*                      Opening
-/*-------------------------------------------------------*/
-
-.opening-animation-container {
-    height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-}
-
-/*-------------------------------------------------------*/
 /*                      Header
 /*-------------------------------------------------------*/
 
@@ -89,7 +78,7 @@ h3 {
     left: 0;
     top: 0;
     width: 100vw;
-    height: 120vh;
+    z-index: 1;
 }
 
 header {
@@ -100,19 +89,25 @@ header {
     background-attachment: fixed;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
         url(/eleonore-kemmel.jpg);
-    height: 120vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
+    z-index: 2;
+}
+
+nav {
+    position: relative;
+    z-index: 3;
 }
 
 .nav-items {
-    width: 50vw;
     height: 10vh;
     display: flex;
-    margin: 2rem 0 0;
-    justify-content: space-evenly;
+    margin: 0;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
+    width: 100vw;
 }
 
 .nav-items li {
@@ -121,6 +116,7 @@ header {
     font-size: 130%;
     font-weight: 150;
     color: violet;
+    margin: 2rem;
 }
 
 .nav-items li:hover {
@@ -136,11 +132,12 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin: 4rem 0 0;
 }
 
 .first-container h1 {
     font-size: 500%;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .first-container p {
@@ -192,7 +189,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    background-color: goldenrod;
     background-attachment: fixed;
     color: var(--white);
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
@@ -200,11 +197,17 @@ header {
     background-size: cover;
 }
 
+.android-development h2:after {
+    content: " ";
+    display: inline-block;
+    width: 100%;
+    border-top: 2px gold solid;
+}
+
 #opening-text {
     text-align: center;
     width: 80vw;
     margin: 3rem auto 4rem;
-    font-size: 120%;
 }
 
 .icons-android-development {
@@ -235,8 +238,7 @@ header {
     background-color: blueviolet;
     background-attachment: fixed;
     color: var(--white);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(/web-development-picture.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
     background-size: cover;
     background-position: center;
 }
@@ -256,15 +258,12 @@ header {
     padding: 20px;
 }
 
-.top-web-container p {
+.top-web-container div {
     width: 50vw;
 }
 
-.android-development h2:after {
-    content: " ";
-    display: inline-block;
-    width: 100%;
-    border-top: 2px violet solid;
+.top-web-container p {
+    text-align: justify;
 }
 
 .web-development h2:after {
@@ -282,67 +281,122 @@ header {
     margin: 6rem 0 0 0;
 }
 
-.bottom-inner-container {
+.front-bottom-inner-container,
+.back-bottom-inner-container {
     width: 30vw;
     height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     box-shadow: rgb(0 0 0 / 80%) 2px 3px 7px 2px;
-    background-color: dimgray;
+    background-color: rgb(0, 0, 0, 1);
     border-radius: 0.5em;
     margin-right: 2rem;
-    transition: 1s;
 }
 
-.bottom-inner-container:hover {
-    transition: 1s;
+.front-bottom-inner-container:hover,
+.back-bottom-inner-container:hover {
     transform: scale(1.1);
     filter: brightness(1.4);
 }
 
-.bottom-inner-container:active {
-    filter: brightness(0.9);
-    transition: 0.5s;
+.front-bottom-inner-container:active,
+.back-bottom-inner-container:active {
+    opacity: 0.8;
 }
 
-.bottom-inner-container ul {
+.front-bottom-inner-container ul,
+.back-bottom-inner-container ul {
     padding: 0;
 }
 
-.bottom-inner-container li {
+.front-bottom-inner-container li,
+.back-bottom-inner-container li {
     list-style: none;
     padding: 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     p {
-        font-size: 90%;
+        font-size: 13px;
+    }
+
+    .first-container h1 {
+        font-size: 18;
+    }
+
+    .icons-inner-container svg {
+        width: 60px;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .nav-items li {
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     p {
-        font-size: 70%;
+        font-size: 10px;
     }
-}
 
-@media screen and (max-width: 400px) {
-    p {
-        font-size: 50%;
+    .first-container h1 {
+        font-size: 16px;
     }
-}
 
-@media screen and (max-width: 300px) {
-    p {
-        font-size: 30%;
+    .icons-inner-container svg {
+        width: 50px;
+        height: 40px;
     }
-    div.introduction {
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .top-web-container {
+        display: flex;
         flex-direction: column;
+    }
+
+    .nav-items li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    p {
+        font-size: 8px;
+    }
+
+    .icons-inner-container svg {
+        width: 40px;
+        height: 30px;
+    }
+
+    .first-container h1 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 14px;
     }
 
     .nav-items {
-        flex-direction: column;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .nav-items li {
+        font-size: 12px;
+    }
+
+    .top-web-container div {
+        width: 100vw;
     }
 }

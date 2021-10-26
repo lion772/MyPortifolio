@@ -42,7 +42,7 @@ export default function Header() {
                     </div>
                 </nav>
                 <div className="first-container">
-                    <h1>Hey!</h1>
+                    <h1>What&apos;s up!</h1>
                     <h3>I&apos;m William Steinke de Mello</h3>
                     <p>
                         Full-Stack development background and <br />
@@ -55,7 +55,7 @@ export default function Header() {
                     params={{
                         particles: {
                             number: {
-                                value: 4000,
+                                value: 1000,
                                 density: {
                                     enable: false,
                                 },
@@ -75,7 +75,7 @@ export default function Header() {
                                 random: true,
                                 speed: 3,
                                 direction: "top",
-                                out_mode: "in",
+                                out_mode: "out",
                             },
                         },
                         interactivity: {

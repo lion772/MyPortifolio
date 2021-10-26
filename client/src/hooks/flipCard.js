@@ -1,28 +1,60 @@
 import React, { useState } from "react";
-import { useSpring, a } from "@react-spring/web";
+/* import { useSpring, a } from "@react-spring/web"; */
+import ReactCardFlip from "react-card-flip";
 
 export default function Flip({ classes }) {
-    const [flipped, set] = useState(false);
-    const { transform, opacity } = useSpring({
-        opacity: flipped ? 1 : 0,
-        transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-        config: { mass: 5, tension: 500, friction: 80 },
-    });
-    console.log(classes);
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleClick = () => {
+        setIsFlipped(!isFlipped);
+    };
+    console.log("name of the class: ", classes);
     return (
-        <div className={classes[0]} onClick={() => set((state) => !state)}>
-            <a.div
-                className={`${styles.c} ${styles.back}`}
-                style={{ opacity: opacity.to((o) => 1 - o), transform }}
-            />
-            <a.div
-                className={`${styles.c} ${styles.front}`}
-                style={{
-                    opacity,
-                    transform,
-                    rotateX: "180deg",
-                }}
-            />
-        </div>
+        <>
+            {classes.includes("front") ? (
+                <>
+                    <ReactCardFlip
+                        isFlipped={isFlipped}
+                        flipDirection="vertical"
+                    >
+                        <div
+                            className={classes}
+                            onClick={handleClick}
+                            style={{}}
+                        >
+                            <p>Front-end</p>
+                        </div>
+
+                        <div className={classes} onClick={handleClick}>
+                            <ul>
+                                <li>JS</li>
+                                <li>Vue</li>
+                                <li>React</li>
+                            </ul>
+                        </div>
+                    </ReactCardFlip>
+                </>
+            ) : (
+                <>
+                    <ReactCardFlip
+                        isFlipped={isFlipped}
+                        flipDirection="vertical"
+                    >
+                        <div
+                            className={classes}
+                            onClick={handleClick}
+                            style={{}}
+                        >
+                            <p>Back-end</p>
+                        </div>
+
+                        <div className={classes} onClick={handleClick}>
+                            <li>Node.js</li>
+                            <li>Postgresql</li>
+                        </div>
+                    </ReactCardFlip>
+                </>
+            )}
+        </>
     );
 }
