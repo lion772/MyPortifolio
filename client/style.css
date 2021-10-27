@@ -144,8 +144,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transition-duration: 1s;
-    transition-property: all;
+    z-index: 3;
 }
 
 .side-nav a {
@@ -154,9 +153,19 @@ header {
 }
 
 .on {
-    transition-property: all;
-    transition-duration: 1s;
     transform: translateX(0);
+}
+
+#burguer-menu {
+    transition: 0.5s;
+    transform: scale(1);
+    filter: brightness(0.9);
+}
+
+#burguer-menu:hover {
+    transition: 0.5s;
+    filter: brightness(1.1);
+    transform: scale(1.4);
 }
 
 .hidden {
@@ -361,6 +370,21 @@ header {
 /*                      Contact
 /*-------------------------------------------------------*/
 
+#burguer-menu-contact svg {
+    width: 40px;
+    height: 30px;
+}
+
+#burguer-menu-contact {
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+#burguer-menu-contact:hover {
+    transition: 0.5s;
+    transform: scale(1.4);
+}
+
 .contact-container {
     background-color: var(--ghostWhite);
     width: 100vw;
@@ -443,6 +467,58 @@ header {
 .bottom-container a:hover {
     border-bottom: 2px darkorchid solid;
     transition: 0.5s;
+}
+
+/*-------------------------------------------------------*/
+/*                      Projects
+/*-------------------------------------------------------*/
+
+.projects-container {
+    background-color: var(--ghostWhite);
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #004177, #00335d);
+    font-family: "Montserrat", sans-serif;
+}
+
+.projects-container h2 {
+    color: var(--white);
+    width: 60vw;
+    text-align: center;
+    font-size: 40px;
+}
+
+.projects-inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.night-sky-background div canvas {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.nav-project {
+    position: relative;
+    background-color: rgba(65, 105, 225, 0.794);
+    height: 10vh;
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100vw;
+    z-index: 2;
+}
+
+.nav-project span {
+    margin-right: 4rem;
 }
 
 @media screen and (max-width: 1024px) {

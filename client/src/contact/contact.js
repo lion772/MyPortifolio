@@ -5,8 +5,7 @@ import Footer from "../hooks/footer";
 export default function Contact() {
     return (
         <div className="contact-container">
-            <Navbar contact={true} />
-            <div className="fill-form"></div>
+            <Navbar isContact={true} />
             <h2>Get in touch!</h2>
             <h3>If you have any question, do not hesitate to ask.</h3>
             <LottieContact />

@@ -3,7 +3,7 @@ import Particles from "react-particles-js";
 import { Link } from "react-router-dom";
 import Navbar from "../hooks/nav";
 
-import { useSpring, animated } from "@react-spring/web";
+//import { useSpring, animated } from "@react-spring/web";
 
 export default function Header() {
     /* const [offsetY, setOffsetY] = useState(0); */
