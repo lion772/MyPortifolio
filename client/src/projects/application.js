@@ -37,18 +37,6 @@ export default function Applications({ name }) {
         <div className="application-container">
             <div className="application-inner-container">
                 {renderMyProject(myProjects, name)}
-                {/* <div className="learn-more">
-                    <h2>{name}</h2>
-                    <Link to={name.toLowerCase().replace(" ", "-")}>
-                        Learn more <span>👉</span>
-                    </Link>
-                </div>
-                <a
-                    id="screenshot-project"
-                    href="https://my-page-social-network.herokuapp.com/"
-                >
-                    <img src="http://localhost:3000/social-network.png" />
-                </a> */}
             </div>
         </div>
     );

@@ -5,6 +5,7 @@ import Header from "./header/header";
 import Contact from "./contact/contact";
 import About from "./skills/about";
 import Projects from "./projects/projects";
+import ProjectInfo from "./projects/project-info";
 const main = document.querySelector("main");
 
 export default function App() {
@@ -23,6 +24,10 @@ export default function App() {
 
                     <Route path="/projects">
                         <Projects />
+                    </Route>
+
+                    <Route path="/social-network">
+                        <ProjectInfo />
                     </Route>
                 </Switch>
             </BrowserRouter>
