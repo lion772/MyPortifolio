@@ -5,6 +5,7 @@
     --white: #fff;
     --red: rgb(255, 0, 0);
     --violet: rgb(211, 119, 211);
+    --spaceBlue: #004177;
 }
 
 body {
@@ -97,7 +98,7 @@ header {
 
 .nav-items {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 10vh;
     display: flex;
     margin: 0;
@@ -130,6 +131,7 @@ header {
     position: fixed;
     inset: 0; /* works in a similar way as margin and padding */
     filter: blur(6px);
+    z-index: 3;
 }
 
 .side-nav {
@@ -339,7 +341,7 @@ header {
     justify-content: center;
     text-align: center;
     box-shadow: rgb(0 0 0 / 80%) 2px 3px 7px 2px;
-    background-color: rgb(0, 0, 0, 1);
+    background-color: rgb(0, 0, 0, 0.7);
     border-radius: 0.5em;
     margin-right: 2rem;
 }
@@ -492,6 +494,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row-reverse;
     height: 80vh;
 }
 
@@ -519,6 +522,54 @@ header {
 
 .nav-project span {
     margin-right: 4rem;
+}
+
+.lottie-space div {
+    position: relative;
+    z-index: 2;
+}
+
+/*-------------------------------------------------------*/
+/*                      Projects
+/*-------------------------------------------------------*/
+
+.application-container {
+    height: 100vh;
+    background-color: ;
+}
+
+.application-inner-container {
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    color: var(--spaceBlue);
+    font-family: "Montserrat", sans-serif;
+}
+
+.application-inner-container img {
+    width: 30vw;
+    object-fit: contain;
+}
+
+#screenshot-project {
+    margin: 4rem 0 0;
+}
+
+.learn-more {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.learn-more a {
+    text-decoration: none;
+    color: var(--spaceBlue);
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 1024px) {

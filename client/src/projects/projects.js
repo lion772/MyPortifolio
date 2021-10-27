@@ -1,6 +1,7 @@
 import Navbar from "../hooks/nav";
 import Footer from "../hooks/footer";
 import LottieSpace from "./lottieSpace";
+import Applications from "./application";
 
 import Particles from "react-particles-js";
 
@@ -65,6 +66,8 @@ export default function Projects() {
                     }}
                 />
             </div>
+
+            <Applications name="social-network" />
         </>
     );
 }

@@ -36,6 +36,33 @@ export default function Navbar({ isContact, isProject }) {
         }
     }
 
+    const checkEitherContactOrProject = (isContact, isProject) => {
+        return (
+            <>
+                {!isContact && !isProject ? (
+                    <>
+                        <Link to="/projects">Go to projects</Link>
+                        <Link to="/contact">Go to contact</Link>
+                    </>
+                ) : (
+                    <>
+                        {isContact ? (
+                            <>
+                                <Link to="/projects">Go to projects</Link>
+                                <Link to="/">Back to main page</Link>
+                            </>
+                        ) : (
+                            <>
+                                <Link to="/contact">Go to contact</Link>
+                                <Link to="/">Back to main page</Link>
+                            </>
+                        )}
+                    </>
+                )}
+            </>
+        );
+    };
+
     console.log("contact is: ", isContact);
     console.log(" isProject : ", isProject);
 
@@ -54,7 +81,7 @@ export default function Navbar({ isContact, isProject }) {
                                     </span>
                                     <div className="overlay"></div>
                                     <div className="side-nav on">
-                                        {!isContact && !isProject ? (
+                                        {/* {!isContact && !isProject ? (
                                             <>
                                                 <Link to="/contact">
                                                     Contact
@@ -67,6 +94,10 @@ export default function Navbar({ isContact, isProject }) {
                                             <Link to="/">
                                                 Back to main page
                                             </Link>
+                                        )} */}
+                                        {checkEitherContactOrProject(
+                                            isContact,
+                                            isProject
                                         )}
                                     </div>
                                 </>
