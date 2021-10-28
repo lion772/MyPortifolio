@@ -70,6 +70,7 @@ export default function Projects({ list }) {
             <Applications name="social-network" list={list} />
             <Applications name="image-board" list={list} />
             <Applications name="petition-project" list={list} />
+            <Footer isProjects={true} />
         </>
     );
 }

@@ -8,7 +8,7 @@ export default function Navbar({ isContact, isProject }) {
     const handleSideNav = () => {
         setSideNav(!isSideNavOn);
     };
-    function checkPropsClass(isContact, isProject) {
+    function checkPropsClass() {
         if (isContact) {
             return "nav-contact";
         } else if (isProject) {
@@ -18,7 +18,7 @@ export default function Navbar({ isContact, isProject }) {
         }
     }
 
-    function checkPropsLinks(isContact, isProject) {
+    function checkPropsLinks() {
         if (!isContact && !isProject) {
             return (
                 <>
@@ -36,7 +36,7 @@ export default function Navbar({ isContact, isProject }) {
         }
     }
 
-    const checkEitherContactOrProject = (isContact, isProject) => {
+    const checkEitherContactOrProject = () => {
         return (
             <>
                 {!isContact && !isProject ? (
@@ -70,8 +70,8 @@ export default function Navbar({ isContact, isProject }) {
         <>
             <nav>
                 <div>
-                    <ul className={checkPropsClass(isContact, isProject)}>
-                        {checkPropsLinks(isContact, isProject)}
+                    <ul className={checkPropsClass()}>
+                        {checkPropsLinks()}
 
                         <span onClick={handleSideNav}>
                             {isSideNavOn ? (
@@ -81,24 +81,7 @@ export default function Navbar({ isContact, isProject }) {
                                     </span>
                                     <div className="overlay"></div>
                                     <div className="side-nav on">
-                                        {/* {!isContact && !isProject ? (
-                                            <>
-                                                <Link to="/contact">
-                                                    Contact
-                                                </Link>
-                                                <Link to="/projects">
-                                                    Projects
-                                                </Link>
-                                            </>
-                                        ) : (
-                                            <Link to="/">
-                                                Back to main page
-                                            </Link>
-                                        )} */}
-                                        {checkEitherContactOrProject(
-                                            isContact,
-                                            isProject
-                                        )}
+                                        {checkEitherContactOrProject()}
                                     </div>
                                 </>
                             ) : (

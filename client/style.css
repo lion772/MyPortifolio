@@ -138,6 +138,7 @@ header {
     position: fixed;
     right: 0;
     top: 0;
+    padding: 10px;
     text-align: center;
     background-color: whitesmoke;
     width: 300px;
@@ -150,8 +151,16 @@ header {
 }
 
 .side-nav a {
-    margin-top: 1rem;
     text-decoration: none;
+    margin-top: 2rem;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.side-nav a:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    text-decoration: underline;
 }
 
 .on {
@@ -192,6 +201,19 @@ header {
 
 .first-container p {
     width: 60vw;
+}
+
+.bottom-container-header {
+    background-color: var(--ghostWhite);
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-container p {
+    color: var(--violet);
 }
 
 /*-------------------------------------------------------*/
@@ -411,7 +433,9 @@ header {
 }
 
 .nav-contact {
+    position: relative;
     background-color: blueviolet;
+    height: 10vh;
     height: 10vh;
     display: flex;
     margin: 0;
@@ -419,6 +443,7 @@ header {
     align-items: center;
     list-style: none;
     width: 100vw;
+    z-index: 3;
 }
 
 .nav-contact span {
@@ -426,6 +451,7 @@ header {
 }
 
 .button {
+    position: relative;
     text-decoration: none;
     border: 2px solid var(--ghostWhite);
     border-radius: 50px;
@@ -434,6 +460,7 @@ header {
     padding: 10px;
     margin-top: 2rem;
     font-family: "Montserrat", sans-serif;
+    z-index: 3;
 }
 
 .bottom-container-content {
@@ -469,6 +496,13 @@ header {
 .bottom-container a:hover {
     border-bottom: 2px darkorchid solid;
     transition: 0.5s;
+}
+
+.snow-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
 }
 
 /*-------------------------------------------------------*/
@@ -587,6 +621,23 @@ header {
 #social-network-picture {
     margin-top: 3rem;
     margin-right: 4rem;
+}
+
+.bottom-container-project {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #010814;
+}
+
+.bottom-container-project div a {
+    color: var(--white);
+}
+
+.bottom-container-project p {
+    color: var(--ghostWhite);
 }
 
 /*-------------------------------------------------------*/

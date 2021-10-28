@@ -6,6 +6,7 @@ import Contact from "./contact/contact";
 import About from "./skills/about";
 import Projects from "./projects/projects";
 import ProjectInfo from "./projects/project-info";
+import Footer from "./hooks/footer";
 
 export default function App() {
     const myProjects = [
@@ -31,7 +32,7 @@ export default function App() {
             src: "http://localhost:3000/petition-project.png",
             logo: "http://localhost:3000/logo3.png",
             description:
-                "The Petition project was the first full scale project merging the technologies we learned to make a fully funcioning website. Using a Node back-end, PostgreSQL database and handlebars templating engine.",
+                "The Petition project was the first full scale project merging the technologies we learned to make a fully functioning website. Using a Node back-end, PostgreSQL database and handlebars templating engine.",
         },
     ];
     return (
@@ -41,6 +42,7 @@ export default function App() {
                     <Route exact path="/">
                         <Header />
                         <About />
+                        <Footer isHeader={true} />
                     </Route>
 
                     <Route path="/contact">

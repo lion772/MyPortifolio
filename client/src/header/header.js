@@ -41,6 +41,7 @@ export default function Header() {
                     </p>
                 </div>
             </header>
+
             <div className="bubble-background">
                 <Particles
                     params={{

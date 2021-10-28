@@ -1,7 +1,16 @@
-export default function Footer() {
+export default function Footer({ isHeader, isProjects, isContact }) {
+    const checkClass = () => {
+        if (!isProjects && !isContact) {
+            return "bottom-container-header";
+        } else {
+            return isProjects
+                ? "bottom-container-project"
+                : "bottom-container-content";
+        }
+    };
     return (
         <>
-            <div className="bottom-container-content">
+            <div className={checkClass()}>
                 <div className="bottom-container">
                     <div>
                         <a href="https://www.linkedin.com/in/william-steinke-de-mello/">
