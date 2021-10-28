@@ -6,7 +6,6 @@ import Contact from "./contact/contact";
 import About from "./skills/about";
 import Projects from "./projects/projects";
 import ProjectInfo from "./projects/project-info";
-const main = document.querySelector("main");
 
 export default function App() {
     return (
@@ -26,7 +25,7 @@ export default function App() {
                         <Projects />
                     </Route>
 
-                    <Route path="/social-network">
+                    <Route path="/project/:projectName">
                         <ProjectInfo />
                     </Route>
                 </Switch>

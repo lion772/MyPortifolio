@@ -535,11 +535,7 @@ header {
 
 .application-container {
     height: 100vh;
-    background-image: linear-gradient(
-        to bottom left,
-        #004177,
-        rgb(29, 156, 240)
-    );
+    background-image: linear-gradient(to top left, #010814, #004177);
 }
 
 .application-inner-container {
@@ -574,6 +570,82 @@ header {
 .learn-more a {
     text-decoration: none;
     color: var(--ghostWhite);
+    margin-right: 3.5rem;
+}
+
+.learn-more svg {
+    position: relative;
+    top: 3.5px;
+}
+
+.logo-title-project {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#social-network-picture {
+    margin-top: 3rem;
+    margin-right: 4rem;
+}
+
+/*-------------------------------------------------------*/
+/*                      Project info
+/*-------------------------------------------------------*/
+
+.project-info-container {
+    height: 100vh;
+    padding: 20px;
+    color: var(--ghostWhite);
+    background-image: linear-gradient(to top left, #010814, #004177);
+    font-family: "Montserrat", sans-serif;
+}
+
+.project-info-container a {
+    text-decoration: none;
+    color: var(--ghostWhite);
+}
+
+.project-info-container p {
+    width: 50vw;
+    text-align: left;
+}
+
+.project-info-container svg {
+    position: relative;
+    top: 3px;
+}
+
+.project-info {
+    display: flex;
+}
+
+.project-info-inner-container {
+    width: 50vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-network-pic {
+    margin-top: 7rem;
+}
+
+.project-info-inner-container img {
+    width: 80%;
+}
+
+.logo-and-title {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#logo {
+    width: 60px;
+    object-fit: contain;
 }
 
 @media screen and (max-width: 1024px) {

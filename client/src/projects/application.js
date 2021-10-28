@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 export default function Applications({ name }) {
     console.log("names :", name);
+    let project;
     const myProjects = [
         {
             name: "social-network",
             href: "https://my-page-social-network.herokuapp.com/",
             src: "http://localhost:3000/social-network.png",
+            logo: "http://localhost:3000/logo.png",
         },
         {
             name: "image-board",
@@ -15,19 +18,33 @@ export default function Applications({ name }) {
         },
     ];
 
+    /* function handleClick() {
+        console.log("clicked", project);
+    } */
+
     const renderMyProject = (arr, name) => {
-        const project = arr.find((obj) => obj.name === name);
+        project = arr.find((obj) => obj.name === name);
         console.log(project);
         return (
             <>
                 <div className="learn-more">
-                    <h2>{name}</h2>
-                    <Link to={name}>
-                        Learn more <span>👉</span>
+                    <div className="logo-title-project">
+                        <img id="logo" src={project.logo} />
+                        <h2>
+                            {name.charAt(0).toUpperCase() +
+                                name.slice(1).replace("-", " ")}
+                        </h2>
+                    </div>
+
+                    <Link to={`/project/${name}`}>
+                        Learn more{" "}
+                        <span>
+                            <MdOutlineArrowForwardIos />
+                        </span>
                     </Link>
                 </div>
                 <a id="screenshot-project" href={project.href}>
-                    <img src={project.src} />
+                    <img id="social-network-picture" src={project.src} />
                 </a>
             </>
         );
