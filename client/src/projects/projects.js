@@ -5,7 +5,7 @@ import Applications from "./application";
 
 import Particles from "react-particles-js";
 
-export default function Projects() {
+export default function Projects({ list }) {
     return (
         <>
             <div className="projects-container">
@@ -67,7 +67,9 @@ export default function Projects() {
                 />
             </div>
 
-            <Applications name="social-network" />
+            <Applications name="social-network" list={list} />
+            <Applications name="image-board" list={list} />
+            <Applications name="petition-project" list={list} />
         </>
     );
 }
